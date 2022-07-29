@@ -1,22 +1,20 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Map></Map>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Map from "./components/Map.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Map,
+  },
+};
 </script>
 
 <style>
+@import url("../node_modules/ol/src/ol.css");
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,5 +22,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+html,
+body,
+#map,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 </style>
